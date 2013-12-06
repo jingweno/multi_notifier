@@ -2,7 +2,7 @@ require "active_model"
 require_relative "model" unless defined?(ActiveModel::Model)
 
 module MultiNotifier
-  class Adapter
+  class Middleware
     include ActiveModel::Model
 
     def notify

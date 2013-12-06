@@ -7,6 +7,6 @@ describe MultiNotifier::Builder do
 
     builder.adapters.size.should == 1
     adapter = builder.adapters.first
-    adapter.class.name.should == "MultiNotifier::Adapters::Mail"
+    adapter.class.name.should == "MultiNotifier::Middlewares::Mail"
   end
 end

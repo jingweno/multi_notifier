@@ -1,7 +1,7 @@
 require "spec_helper"
-require "multi_notifier/adapters/travis"
+require "multi_notifier/middlewares/travis"
 
-describe MultiNotifier::Adapters::Travis do
+describe MultiNotifier::Middlewares::Travis do
   context "validations" do
     [:access_token, :repo].each do |field|
       it "#{field} can't be blank" do

@@ -1,9 +1,9 @@
 require "action_mailer" unless defined?(::ActionMailer)
-require "multi_notifier/adapter"
+require "multi_notifier/middleware"
 
 module MultiNotifier
-  module Adapters
-    class Mail < Adapter
+  module Middlewares
+    class Mail < Middleware
       class DeliveryValidator < ::ActiveModel::Validator
         def validate(model)
           if model.delivery.present?

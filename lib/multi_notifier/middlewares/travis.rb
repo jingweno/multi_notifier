@@ -1,9 +1,9 @@
 require "travis" unless defined?(::Travis)
-require "multi_notifier/adapter"
+require "multi_notifier/middleware"
 
 module MultiNotifier
-  module Adapters
-    class Travis < Adapter
+  module Middlewares
+    class Travis < Middleware
       attr_accessor :access_token, :repo, :travis_pro
 
       validates_presence_of :access_token, :repo
