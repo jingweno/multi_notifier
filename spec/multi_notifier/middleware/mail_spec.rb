@@ -1,7 +1,7 @@
 require "spec_helper"
-require "multi_notifier/adapters/mail"
+require "multi_notifier/middlewares/mail"
 
-describe MultiNotifier::Adapters::Mail do
+describe MultiNotifier::Middlewares::Mail do
   context "validations" do
     [:delivery, :from, :to, :subject, :text_body].each do |field|
       it "#{field} can't be blank" do
@@ -22,7 +22,7 @@ describe MultiNotifier::Adapters::Mail do
 
   context "notify" do
     it "sends email" do
-      mail = MultiNotifier::Adapters::Mail.new
+      mail = MultiNotifier::Middlewares::Mail.new
       mail.delivery = {
         :method => :test
       }

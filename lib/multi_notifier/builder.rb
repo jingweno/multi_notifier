@@ -8,9 +8,9 @@ module MultiNotifier
       @adapters = []
     end
 
-    def adapter(type, configs = {})
-      require "multi_notifier/adapters/#{type}"
-      adapter = "MultiNotifier::Adapters::#{type.to_s.classify}".constantize
+    def use(type, configs = {})
+      require "multi_notifier/middlewares/#{type}"
+      adapter = "MultiNotifier::Middlewares::#{type.to_s.classify}".constantize
       adapters << adapter.new(configs)
 
       adapter
