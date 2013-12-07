@@ -47,7 +47,7 @@ builder.adapter :mail,
 
 ### Travis
 
-The [travis middleware](https://github.com/jingweno/multi_notifier/blob/master/lib/multi_notifier/middlewares/travis.rb) restart the latest build with the provided repo.
+The [travis middleware](https://github.com/jingweno/multi_notifier/blob/master/lib/multi_notifier/middlewares/travis.rb) restarts the latest build with the provided repo.
 
 ```ruby
 builder.adapter :travis,
