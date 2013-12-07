@@ -30,7 +30,7 @@ end.notify_all!
 
 ### Mail
 
-The mail middleware sends email with the provided settings.
+The [mail middleware](https://github.com/jingweno/multi_notifier/blob/master/lib/multi_notifier/middlewares/mail.rb) sends email with the provided settings.
 
 ```ruby
 builder.adapter :mail,
@@ -47,7 +47,7 @@ builder.adapter :mail,
 
 ### Travis
 
-The travis middleware restart the latest build with the provided repo.
+The [travis middleware](https://github.com/jingweno/multi_notifier/blob/master/lib/multi_notifier/middlewares/travis.rb) restart the latest build with the provided repo.
 
 ```ruby
 builder.adapter :travis,
