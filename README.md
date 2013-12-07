@@ -38,8 +38,8 @@ builder.adapter :mail,
     :method => Rails.configuration.action_mailer.delivery_method, # delivery method
     :settings => Rails.configuration.action_mailer.send("#{Rails.configuration.action_mailer.delivery_method}_settings") # deivery settings
   },
-  :from => "notifications@aclgrc.com", # from email
-  :to => "devs@workpapers.com", # to email
+  :from => "from@owenou.com", # from email
+  :to => "to@owenou.com", # to email
   :subject => "subject", # email subject
   :text_body => mail_text_body, # email body in text
   :html_body => mail_html_body # email body in html
