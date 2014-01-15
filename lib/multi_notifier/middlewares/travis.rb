@@ -11,8 +11,8 @@ module MultiNotifier
       def notify
         host = travis_pro? ? ::Travis::Client::PRO_URI : ::Travis::Client::ORG_URI
         client = travis_client(host, access_token)
-        repo = client.repo(repo)
-        repo.last_build.restart
+        r = client.repo(repo)
+        r.last_build.restart
       end
 
       def travis_pro?

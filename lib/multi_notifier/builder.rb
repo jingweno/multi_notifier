@@ -10,7 +10,7 @@ module MultiNotifier
 
     def use(type, configs = {})
       require "multi_notifier/middlewares/#{type}"
-      adapter = "MultiNotifier::Middlewares::#{type.to_s.classify}".constantize
+      adapter = "MultiNotifier::Middlewares::#{type.to_s.titleize.gsub(' ', '')}".constantize
       adapters << adapter.new(configs)
 
       adapter
