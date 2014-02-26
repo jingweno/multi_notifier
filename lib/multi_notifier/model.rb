@@ -1,6 +1,6 @@
 # Copy ActiveModel::Model from Rails 4.x here
 module MultiNotifier
-  class Adapter
+  module Middlewares
     module ActiveModel
       module Model
         def self.included(base)
